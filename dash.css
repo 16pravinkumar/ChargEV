@@ -1,0 +1,248 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #e5e7eb;
+
+
+}
+
+.main-container {
+    display: flex;
+}
+
+#container {
+    background-color: #111827;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+#container .logo img {
+    width: 260px;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+}
+
+#container .items {
+    margin-top: 25px;
+}
+
+#container .items li {
+    list-style: none;
+    padding: 18px 0;
+    transition: 0.3s ease;
+}
+
+#container .items li:hover {
+    background: #253047;
+    cursor: pointer;
+
+
+}
+
+
+
+#container .items li i {
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    margin: 0 12px 0 26px;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#container .items li:hover i,
+#container .items li:hover a {
+    color: #f3f4f6;
+
+}
+
+#container .items li a {
+    color: rgb(134, 141, 151);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    transition: 0.3s ease;
+}
+
+/* ********************************** Right Section ***************************** */
+.right-section {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+.right-section .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+    border-bottom: 2px solid blueviolet;
+    position: fixed;
+    width: calc(100% - 300px);
+
+}
+
+.right-section .navbar .sear {
+    padding: 10px 14px;
+    font-size: 18px;
+}
+
+.right-section .navbar .sear h3 {
+    color: rgb(122, 127, 134);
+}
+
+.right-section .navbar .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right-section .navbar .profile h5 {
+    font-size: 15px;
+    margin-right: 20px;
+    color: rgb(122, 127, 134);
+}
+
+.right-section .navbar .profile img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.right-section .navbar .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-section .navbar .nav #btn {
+    font-size: 20px;
+    color: #2b2b2b;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+}
+
+
+
+/* **************** Right-side Bottom Section ************************ */
+table {
+    margin-top: 120px;
+    border-collapse: collapse;
+}
+
+.table {
+    width: 94%;
+
+    margin: 30px 0 30px 30px;
+    background: white;
+    border-radius: 8px;
+}
+
+.table thead tr td {
+    color: rgb(71, 72, 73);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: start;
+    padding: 15px;
+
+}
+
+.table tbody tr td {
+    color: rgb(122, 127, 134);
+    font-weight: 200;
+    font-size: 17px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+tr {
+    border-bottom: 1px solid rgb(235, 232, 232);
+}
+
+.table tbody td.customer-time h5 {
+    background: #bdffc3;
+    padding: 2px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #5a5858;
+}
+
+
+/* ************************* Resonsive Part *************************** */
+@media (max-width:769px) {
+    #container {
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+
+    }
+
+    #container.active {
+        left: 0;
+
+    }
+
+    .right-section {
+        width: 100%;
+        margin-left: 0;
+        transition: 0.3s ease;
+
+    }
+
+    #container.active~.right-section {
+        width: calc(100%-270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+
+    .right-section .navbar {
+        width: 100%;
+    }
+
+    .table {
+        margin: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .right-section .navbar .nav #btn {
+        display: initial;
+    }
+    .table{
+        margin-top: 30px 15px 30px 15px;
+    }
+
+}
+
+@media (max-width:477px) {
+
+    .right-section .navbar {
+
+        width: 84%;
+        padding: 15px ;
+    }
+    .table{
+        margin-top: 30px 15px 30px 15px;
+    }
+    
+}
